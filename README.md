@@ -13,6 +13,6 @@
 <br>►Why I made this?
 <br>I know there are many websites and softwares that can do the same but Textemage is a very lite program and superfast to extract text and can be used offline. Just put it in your toolbox!
 <br>
-<br>►User Interface
+<br>►User Interface:
 <br>![UI](https://user-images.githubusercontent.com/89206401/139088648-683b1237-2dac-4b74-80fe-d254c772623e.png)
 <br>Thanks for visiting!
