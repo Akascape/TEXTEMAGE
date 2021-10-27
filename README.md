@@ -4,7 +4,7 @@
 <br>This is a very fast extracting tool that you can have in your tools softwares.
 <br>
 <br>►How to Install?
-<br>-For Python users, you just have to download the files from the Python Version folder, then just double click on the Textemage.py to open the program. Make sure you have <br>Pytesserect and PIL module installed(You will also need to install an extra package called tesserect externally).
+<br>-For Python users, you just have to download the files from the Python Version folder, then just double click on the Textemage.py to open the program. Make sure you have <br>Pytesserect module installed(You will also need to install an extra package called tesserect externally).
 <br>-For normal user, just donwload the Textemage.exe and run the software and use.(The same python version is converted to .exe using Auto-py-to-exe Converter)
 <br>
 <br>►How to Use?
