@@ -1,5 +1,5 @@
 # TEXTEMAGE!
-<br>                      ![headlabel](https://user-images.githubusercontent.com/89206401/139088110-c5860bdf-6c67-450f-af4d-d6cca8f69029.png)
+<br>                                ![headlabel](https://user-images.githubusercontent.com/89206401/139088110-c5860bdf-6c67-450f-af4d-d6cca8f69029.png)
 <br>Textemage is a quick tool that extracts text from images, it is a Python based GUI program(also available in executable version).
 <br>This is a very fast extracting tool that you can have in your tools softwares.
 <br>►How to Install?
