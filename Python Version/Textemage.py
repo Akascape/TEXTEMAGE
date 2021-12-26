@@ -25,7 +25,7 @@ def openfile():
         saveImg['text']='OPEN'
         saveImg['bg']="#82CC6C"
 def Check():
-    if(len(file)>1):
+    if(saveImg['text']=='REOPEN'):
         change(file)
     else:
         messagebox.showerror("Error","Please open your image!")    
