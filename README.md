@@ -3,7 +3,7 @@
 <br>Textemage is a Python based GUI program that can extract text from images.
 <br>
 ## How to Install?
-- For basic windows users, just download the Textemage.exe from the release page: [⬇️DOWNLOAD⬇️](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage.exe) 
+- For windows users, just download the Textemage.exe from the release page: [⬇️DOWNLOAD⬇️](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage.exe) 
 - For Python users, you just have to download the files from the Python Version folder, then just run Textemage.py file to open the program. Make sure you have Pytesserect module installed (You will also need to install an extra package called tesserect externally).
 ## How to Use?
 Its super easy to use this software, just open the image file you want to extract and then click on that extract button, then it will extract the text within seconds in a separate txt file that you can view immedietly.
