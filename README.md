@@ -8,9 +8,9 @@
 -For basic windows users, just download the Textemage.exe from the release page: [⬇️DOWNLOAD⬇️](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage.exe) 
 <br>(The same python version is converted to .exe using Auto-py-to-exe Converter)
 ## How to Use?
-<br>Its super easy to use this software, just open the image file you want to extract and then click on that extract button, then it will extract the text within seconds in a separate txt file that you can view immedietly.
+Its super easy to use this software, just open the image file you want to extract and then click on that extract button, then it will extract the text within seconds in a separate txt file that you can view immedietly.
 ## Why I made this?
-<br>I know there are many websites and softwares that can do the same but Textemage is a very lite program and superfast to extract text and can be used offline. Just put it in your toolbox!
+I know there are many websites and softwares that can do the same but Textemage is a very lite program and superfast to extract text and can be used offline. Just put it in your toolbox!
 ## UI:
 <br>![UI](https://user-images.githubusercontent.com/89206401/139088648-683b1237-2dac-4b74-80fe-d254c772623e.png)
 ## Thanks for visiting!
