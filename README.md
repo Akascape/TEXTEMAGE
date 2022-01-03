@@ -6,7 +6,7 @@
 ## How to Install?
 <br>-For Python users, you just have to download the files from the Python Version folder, then just double click on the Textemage.py to open the program. Make sure you have <br>Pytesserect module installed(You will also need to install an extra package called tesserect externally).
 <br>-For basic windows users, just download the Textemage.exe from the release page:
-<br>[⬇️DOWNLOAD⬇️](https://github.com/Akascape/TEXTEMAGE/releases/tag/Textemage.exe) 
+<br>[⬇️DOWNLOAD⬇️](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage.exe) 
 <br>(The same python version is converted to .exe using Auto-py-to-exe Converter)
 <br>
 ## How to Use?
