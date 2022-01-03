@@ -10,7 +10,7 @@
 <br>(The same python version is converted to .exe using Auto-py-to-exe Converter)
 <br>
 ## How to Use?
-<br>Its super easy to use this software, just open the image file you want to extract and then click on that extract button, then it will extract the text within seconds in a <br>separate txt file that you can view immedietly.
+<br>Its super easy to use this software, just open the image file you want to extract and then click on that extract button, then it will extract the text within seconds in a separate txt file that you can view immedietly.
 <br>
 ## Why I made this?
 <br>I know there are many websites and softwares that can do the same but Textemage is a very lite program and superfast to extract text and can be used offline. Just put it in your toolbox!
