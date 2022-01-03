@@ -1,6 +1,6 @@
 # TEXTEMAGE!
 <br><p align='center'>![headlabel](https://user-images.githubusercontent.com/89206401/139088110-c5860bdf-6c67-450f-af4d-d6cca8f69029.png)</p>
-<br>Textemage is a quick tool that extracts text from images, it is a Python based GUI program.
+<br>Textemage is a Python based GUI program that can extract text from images.
 <br>
 ## How to Install?
 -For Python users, you just have to download the files from the Python Version folder, then just run Textemage.py file to open the program. Make sure you have Pytesserect module installed (You will also need to install an extra package called tesserect externally).
