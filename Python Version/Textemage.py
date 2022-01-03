@@ -32,7 +32,7 @@ def Check():
 def change(file):
     try:
         img=Image.open(file)
-        patht=resource_path0("Tesseract\Tesseract-OCR\Tesseract.exe")#make sure you install the tesseract module inside the folder Tesseract.
+        patht=resource_path0("Tesseract\Tesseract-OCR\Tesseract")#make sure you install the tesseract module inside the folder Tesseract.
         pytesseract.pytesseract.tesseract_cmd=patht
         result=pytesseract.image_to_string(img)
         outputfile=os.path.splitext(file)[0]+'_extracted'+".txt"
