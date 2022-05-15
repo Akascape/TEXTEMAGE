@@ -5,7 +5,7 @@
 ## How to Install?
 - For windows users, just download the Textemage.exe from the release page (everything is included): 
 
-<br> [<img src="https://img.shields.io/badge/-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=1bdce3" width=200>](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage.exe)
+<br> <p align='center'> [<img src="https://img.shields.io/badge/-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=1bdce3" width=200>](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage.exe)
 
 - For Python users, you just have to download the [Python Version folder](https://github.com/Akascape/TEXTEMAGE/tree/main/Python%20Version), then just run Textemage.py file to open the program. Make sure you have Pytesserect module installed (You will also need to install an extra package called tesserect externally).
 ## How to Use?
