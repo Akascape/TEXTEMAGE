@@ -1,5 +1,5 @@
-# TEXTEMAGE!
-<br><p align='center'>![headlabel](https://user-images.githubusercontent.com/89206401/139088110-c5860bdf-6c67-450f-af4d-d6cca8f69029.png)</p>
+[![header](https://capsule-render.vercel.app/api?type=cylinder&color=timeGradient&section=header&text=TEXTEMAGE&fontSize=90&animation=fadeIn)](https://github.com/Akascape/Akascape)
+
 <br>Textemage is a Python based GUI program that can easily extract text from images using the Tesserect/Pytesserect modules.
 <br>
 ## How to Install?
