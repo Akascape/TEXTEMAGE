@@ -32,7 +32,7 @@ def Check():
 def change(file):
     try:
         img=Image.open(file)
-        patht=resource_path0("Tesseract\Tesseract-OCR\Tesseract")#make sure you install the tesseract module inside the folder Tesseract.
+        patht=resource_path0("Tesseract\Tesseract-OCR\Tesseract")
         pytesseract.pytesseract.tesseract_cmd=patht
         result=pytesseract.image_to_string(img)
         outputfile=os.path.splitext(file)[0]+'_extracted'+".txt"
@@ -66,7 +66,7 @@ path2=resource_path0("headlabel.png")
 label=PhotoImage(file=path2)
 my_canvas.create_image(0,0, image=label, anchor="nw")
 LocationError=my_canvas.create_text(250,60,text="Please Choose the Image",fill="#6D76CD", font=("Aharoni",10))
-saveImg=Button(root, width=50,bg="#82CC6C",fg="white",highlightthickness=1,borderwidth=0.2,text="OPEN",relief="groove", command=openfile)
+saveImg=Button(root, width=50,bg="#82CC6C",fg="white",highlightthickness=1,borderwidth=0.2,text="OPEN",relief="groove",font=("Aharoni",10), command=openfile)
 saveImg_window=my_canvas.create_window(250,90, window=saveImg)
 path3=resource_path0("convertbutton.png")
 Icon=PhotoImage(file=path3)
@@ -77,5 +77,4 @@ my_canvas.create_text(170,300,text="This is a quick tool to extract text from im
                     "\nDeveloper: Akash Bora (A.k.a Akascape)\nFor more info, visit our github page!",font=("Aharoni",10), fill="white")
 root.mainloop()
 #DEVELOPER= AKASH BORA(a.k.a Akascape)
-#Version=1.0
-
+#Version=1.1
