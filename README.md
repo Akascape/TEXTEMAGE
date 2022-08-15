@@ -4,9 +4,9 @@
 <br>
 ## How to Install?
 - For windows users, just download the Textemage.exe from the release page (no need to setup anything, everything is included): 
-<br> <p align='center'> [<img src="https://img.shields.io/badge/-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=1bdce3" width=200>](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage.exe)
+<br> <p align='center'> [<img src="https://img.shields.io/badge/-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=1bdce3" width=200>](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage_win64.zip)
 
-- For Python users, you just have to download the [Python Version folder](https://github.com/Akascape/TEXTEMAGE/tree/main/Python%20Version), then just run Textemage.py file to open the program. Make sure you have Pytesserect module installed (You will also need to install an extra package called tesserect externally).
+- For Python users, you just have to download the [Python Version folder](https://github.com/Akascape/TEXTEMAGE/tree/main/Python%20Version), then just run Textemage.py file to open the program. Make sure you have Pytesseract and Tesseract module installed.
 ## How to Use?
 Its super easy to use this software, just open the image file you want to extract and then click on that extract button, then it will extract the text within seconds in a separate txt file that you can view immedietly.
 ## Why I made this?
