@@ -20,7 +20,7 @@ Its super easy to use textemage, just **open the image file** and click on that 
 ## Why I made this?
 I know there are many websites and softwares that can do the same but Textemage is a very lite and offline program that can quickly extract text from images. Just put it in your toolbox!
 
-## UI:
+## UI
 ![Screenshot 1](https://user-images.githubusercontent.com/89206401/216761210-c70957e6-cff9-4865-bf3a-a68a9426051c.jpg)
 ![Screenshot 2](https://user-images.githubusercontent.com/89206401/216761211-6aca23b0-aef3-4e57-a420-ddbc6a2b400f.jpg)
 
