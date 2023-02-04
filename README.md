@@ -7,6 +7,13 @@
 
 <br> <p align='center'> **SOURCE CODE** <br> <p align='center'> [<img src="https://img.shields.io/badge/Python_Version-informational?style=flat&logo=python&logoColor=blue&color=eaea4a" width=200 height=40>](https://github.com/Akascape/TEXTEMAGE/archive/refs/heads/main.zip) <br> Don't forget to leave a ⭐ </p>
 
+## Python installation
+- download the source code
+- install modules given in the requirements.txt 
+- download [Tesseract-OCR](https://tesseract-ocr.github.io/tessdoc/Installation.html) in your system. 
+- run `Textemage.py`
+
+
 ## How to Use?
 Its super easy to use textemage, just **open the image file** and click on that `extract` button, it will immediately display the extracted text in the text box. You can then copy the text easily. 
 
