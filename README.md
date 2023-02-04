@@ -10,7 +10,7 @@
 ## Python installation
 - download the source code
 - install modules given in the requirements.txt 
-- download [Tesseract-OCR](https://tesseract-ocr.github.io/tessdoc/Installation.html) in your system. 
+- download [Tesseract-OCR](https://tesseract-ocr.github.io/tessdoc/Installation.html) in your system.
 - run `Textemage.py`
 
 
