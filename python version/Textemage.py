@@ -1,6 +1,6 @@
 """
 TEXTEMAGE
-version: 1.2
+version: 1.3
 author: Akash Bora (Akascape)
 license: MIT
 more info: https://github.com/Akascape/TEXTEMAGE
@@ -42,12 +42,9 @@ file = ""
 image = ""
 previous = ""
 
-def open_image():
-    # open image file
+def load_image():
     global file, image, img, previous
-    file = tkinter.filedialog.askopenfilename(filetypes =[('Images', ['*.png','*.jpg','*.jpeg','*.bmp','*webp'])
-                                                          ,('All Files', '*.*')])
-    if file:
+    if os.path.exists(file):
         previous = file
         if len(os.path.basename(file))>=30:
             open_button.configure(text=os.path.basename(file)[:30]+"..."+os.path.basename(file)[-3:])
@@ -64,10 +61,32 @@ def open_image():
         image = ctk.CTkImage(img)
         label_image.configure(text="", image=image)
         image.configure(size=(label_image.winfo_height(),label_image.winfo_height()*img.size[1]/img.size[0]))
+        tip.hide()
     else:
         if previous!="":
             file = previous
             
+def open_image():
+    # open image file
+    global file
+    file = tkinter.filedialog.askopenfilename(filetypes =[('Images', ['*.png','*.jpg','*.jpeg','*.bmp','*.webp'])
+                                                          ,('All Files', '*.*')])
+    load_image()
+    
+def drop(event):
+    """
+    tkinter drag and drop not implemented for this python version
+    because it needs extra packages and manual modification in some libraries
+    """
+    
+    global file
+    if os.path.splitext(event.data.replace("{","").replace("}", ""))[-1] in ['.png','.jpg','.jpeg','.bmp','.webp']:
+        file = event.data.replace("{","").replace("}", "")
+    else:
+        return
+
+    load_image()  
+    
 def resize_event(event):
     # dynamic resize of the image with UI
     global image
@@ -87,7 +106,17 @@ def convert():
 
     text_box.delete(1.0, tkinter.END)
     text_box.insert(tkinter.END, result)
+    
+def do_popup(event, frame):
+    try: frame.tk_popup(event.x_root, event.y_root)
+    finally: frame.grab_release()
 
+def paste():
+    try:
+        text_box.index(text_box.insert(tkinter.END, root.clipboard_get()))
+    except:
+        pass
+    
 if ctk.get_appearance_mode()=="Dark":
     o = 1
 else:
@@ -108,14 +137,14 @@ def new_window():
     top_level.protocol("WM_DELETE_WINDOW", exit_top_level)
     top_level.minsize(400,200)
     top_level.title("About")
-    top_level.attributes("-topmost", True)
     top_level.resizable(width=False, height=False)
+    top_level.transient(root)
     top_level.wm_iconbitmap()
     top_level.iconphoto(False, icopath)
     
-    label_top = ctk.CTkLabel(top_level, text="Textemage v1.2", font=("Roboto",15))
+    label_top = ctk.CTkLabel(top_level, text="Textemage v1.3", font=("Roboto",15))
     label_top.grid(padx=20, pady=20, sticky="w")
-    
+
     try:
         version = str(pytesseract.get_tesseract_version())[:5]
     except:
@@ -130,7 +159,7 @@ def new_window():
     label_logo = ctk.CTkLabel(top_level, text="", image=logo)
     label_logo.place(x=230,y=20)
     
-    link = ctk.CTkLabel(top_level, text="Official Page", justify="left", font=("",13), text_color="light blue")
+    link = ctk.CTkLabel(top_level, text="Official Page", justify="left", font=("",13), text_color=("blue", "light blue"))
     link.grid(padx=20, pady=0, sticky="w")   
     link.bind("<Button-1>", lambda event: web("https://github.com/Akascape/TEXTEMAGE"))
     link.bind("<Enter>", lambda event: link.configure(font=("", 13, "underline"), cursor="hand2"))
@@ -138,11 +167,15 @@ def new_window():
 
 DIRPATH = os.getcwd()
 
-with open(os.path.join(DIRPATH,"tesseract_path.txt"), 'r') as tfile:
-    patht = tfile.read() # read the path from the path file
-    pytesseract.pytesseract.tesseract_cmd = patht
-    tfile.close()
 
+if os.path.exists(os.path.join(DIRPATH,"tesseract_path.txt")):
+    with open(os.path.join(DIRPATH,"tesseract_path.txt"), 'r') as tfile:
+        patht = tfile.read() # read the path from the path file
+        pytesseract.pytesseract.tesseract_cmd = patht
+        tfile.close()
+else:
+    pytesseract.pytesseract.tesseract_cmd = "tesseract"
+    
 frame_1 = ctk.CTkFrame(root)
 frame_1.grid(row=0, column=0, sticky="news", padx=20, pady=20)
 frame_1.rowconfigure(2, weight=1)
@@ -154,10 +187,11 @@ frame_2.rowconfigure(1, weight=1)
 frame_2.columnconfigure(0, weight=1)
 
 label_header = ctk.CTkButton(frame_1, text="TEXTEMAGE", fg_color=ctk.ThemeManager.theme["CTkTextbox"]["fg_color"][o],
-                             height=30, command=new_window, hover=False, corner_radius=30)
+                             height=30, command=new_window, hover=False, corner_radius=30,
+                             text_color=ctk.ThemeManager.theme["CTkLabel"]["text_color"][o])
 label_header.grid(padx=10, pady=10)
 
-open_button = ctk.CTkButton(frame_1, text="OPEN SOURCE IMAGE", command=open_image, corner_radius=30)
+open_button = ctk.CTkButton(frame_1, text="OPEN IMAGE SOURCE", command=open_image, corner_radius=30)
 open_button.grid(padx=10, pady=10, sticky="nwe")
 
 image_frame = ctk.CTkFrame(frame_1, corner_radius=20)
@@ -167,6 +201,9 @@ image_frame.columnconfigure(0, weight=1)
 
 label_image = ctk.CTkLabel(image_frame, text="➕", corner_radius=10)
 label_image.grid(padx=10, pady=10, sticky="nwes")
+
+#label_image.drop_target_register(DND_FILES)
+#label_image.dnd_bind('<<Drop>>', drop)
 
 image_frame.bind("<Configure>", resize_event)
 
@@ -178,6 +215,14 @@ label_2.grid(padx=10, pady=10)
 
 text_box = ctk.CTkTextbox(frame_2)
 text_box.grid(sticky="news", padx=10, pady=10)
-text_box._textbox.configure(selectbackground=open_button._apply_appearance_mode(open_button._fg_color))
+text_box._textbox.configure(selectbackground=root._apply_appearance_mode(open_button._fg_color))
+
+RightClickMenu = tkinter.Menu(text_box, tearoff=False, fg=ctk.ThemeManager.theme["CTkLabel"]["text_color"][o],
+                              background=ctk.ThemeManager.theme["CTkFrame"]["top_fg_color"][o],
+                              activebackground=root._apply_appearance_mode(open_button._fg_color))
+RightClickMenu.add_command(label="copy", command=lambda: root.clipboard_append(text_box.get(1.0, tkinter.END)))
+RightClickMenu.add_command(label="paste", command=paste)
+RightClickMenu.add_command(label="cut", command=lambda: text_box.delete(1.0, tkinter.END))
+text_box.bind("<Button-3>", lambda event: do_popup(event, frame=RightClickMenu))
 
 root.mainloop()
