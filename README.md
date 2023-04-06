@@ -3,7 +3,7 @@
 <br> Textemage is an **open-source** program that can easily extract text from images using [Tesserect-OCR](https://github.com/tesseract-ocr/tesseract)
 <br>
 ## Download
-<br> <p align='center'> **WINDOWS (Tesseract 5.3.0 Included)** <br> <p align='center'> [<img src="https://img.shields.io/badge/FREE-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=green" width=300>](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage_v1.2_win64.zip)
+<br> <p align='center'> **WINDOWS (Tesseract 5.3.0 Included)** <br> <p align='center'> [<img src="https://img.shields.io/badge/FREE-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=green" width=300>](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage_v1.3_win64.zip)
 
 <br> <p align='center'> **SOURCE CODE** <br> <p align='center'> [<img src="https://img.shields.io/badge/Python_Version-informational?style=flat&logo=python&logoColor=blue&color=eaea4a" width=200 height=40>](https://github.com/Akascape/TEXTEMAGE/archive/refs/heads/main.zip) <br> Don't forget to leave a ⭐ </p>
 
@@ -11,8 +11,8 @@
 - download the source code
 - install modules given in the requirements.txt 
 - download [Tesseract-OCR](https://tesseract-ocr.github.io/tessdoc/Installation.html) in your system.
+- paste the tesseract path in the `tesseract_path.txt` file
 - run `Textemage.py`
-
 
 ## How to Use?
 Its super easy to use textemage, just **open the image file** and click on that `extract` button, it will immediately display the extracted text in the text box. You can then copy the text easily. 
