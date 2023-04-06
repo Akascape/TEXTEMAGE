@@ -18,7 +18,7 @@
 Its super easy to use textemage, just **open the image file** and click on that `extract` button, it will immediately display the extracted text in the text box. You can then copy the text easily. 
 
 ## Why I made this?
-I know there are many websites and softwares that can do the same but Textemage is a very lite and offline program that can quickly extract text from images. Just put it in your toolbox!
+I know there are many websites and softwares that can do the same but Textemage is a very lite and offline program that can quickly extract text from images. Just keep it in your toolbox!
 
 ## UI
 ![Screenshot 1](https://user-images.githubusercontent.com/89206401/216761210-c70957e6-cff9-4865-bf3a-a68a9426051c.jpg)
