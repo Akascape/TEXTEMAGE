@@ -2,6 +2,12 @@
 
 <br> Textemage is an **open-source** program that can easily extract text from images using [Tesserect-OCR](https://github.com/tesseract-ocr/tesseract)
 <br>
+## Features
+- Modern and user friendly interface
+- Ability to use different OCR versions
+- Drag and drop file support
+- One click text extraction
+
 ## Download
 <br> <p align='center'> **WINDOWS (Tesseract 5.3.0 Included)** <br> <p align='center'> [<img src="https://img.shields.io/badge/FREE-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=green" width=300>](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage_v1.3_win64.zip)
 
