@@ -161,7 +161,7 @@ def new_window():
     top_level.resizable(width=False, height=False)
     top_level.transient(root)
     top_level.wm_iconbitmap()
-    top_level.iconphoto(False, icopath)
+    top_level.after(200, lambda: top_level.iconphoto(False, icopath))
     
     label_top = ctk.CTkLabel(top_level, text="Textemage v1.4", font=("Roboto",15))
     label_top.grid(padx=20, pady=20, sticky="w")
