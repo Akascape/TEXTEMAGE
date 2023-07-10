@@ -17,7 +17,7 @@
 - download the source code
 - install modules given in the requirements.txt 
 - download [Tesseract-OCR](https://tesseract-ocr.github.io/tessdoc/Installation.html) in your system.
-- paste the tesseract path in the `tesseract_path.txt` file
+- paste the full tesseract.exe path in the `tesseract_path.txt` file
 - run `Textemage.py`
 
 ## How to Use?
