@@ -1,11 +1,10 @@
 """
 TEXTEMAGE
-version: 1.3
+version: 1.4
 author: Akash Bora (Akascape)
 license: MIT
 more info: https://github.com/Akascape/TEXTEMAGE
 """
-
 
 import customtkinter as ctk
 import tkinter
@@ -76,7 +75,7 @@ def open_image():
 def drop(event):
     """
     tkinter drag and drop not implemented for this python version
-    because it needs extra packages and manual modification in some libraries
+    as it needs extra packages and manual modification in some libraries
     """
     
     global file
@@ -117,6 +116,28 @@ def paste():
     except:
         pass
     
+def cut_text():
+    """ cut text operation """
+    copy_text()
+    try: text_box.delete(tkinter.SEL_FIRST, tkinter.SEL_LAST)
+    except: pass
+    
+def copy_text():
+    """ copy text operation """
+    root.clipboard_clear()
+    try: root.clipboard_append(text_box.get(tkinter.SEL_FIRST, tkinter.SEL_LAST))
+    except: pass
+
+def paste_text():
+    """ paste text operation """
+    try: text_box.insert(text_box.index('insert'), root.clipboard_get())
+    except: pass
+
+def clear_text():
+    """ clears the textbox """
+    text_box.delete("1.0","end")
+
+      
 if ctk.get_appearance_mode()=="Dark":
     o = 1
 else:
@@ -142,7 +163,7 @@ def new_window():
     top_level.wm_iconbitmap()
     top_level.iconphoto(False, icopath)
     
-    label_top = ctk.CTkLabel(top_level, text="Textemage v1.3", font=("Roboto",15))
+    label_top = ctk.CTkLabel(top_level, text="Textemage v1.4", font=("Roboto",15))
     label_top.grid(padx=20, pady=20, sticky="w")
 
     try:
@@ -153,8 +174,6 @@ def new_window():
     desc = "Tesseract version: "+version+"\n\nDeveloped by Akash Bora (Akascape) \nLicense: MIT \nCopyright 2023 "
     label_disc = ctk.CTkLabel(top_level,  text=desc, justify="left", font=("Roboto",12))
     label_disc.grid(padx=20, pady=0, sticky="w")
-
-    logo = ctk.CTkImage(Image.open(resource("icon.png")), size=(150,150))
     
     label_logo = ctk.CTkLabel(top_level, text="", image=logo)
     label_logo.place(x=230,y=20)
@@ -175,7 +194,8 @@ if os.path.exists(os.path.join(DIRPATH,"tesseract_path.txt")):
         tfile.close()
 else:
     pytesseract.pytesseract.tesseract_cmd = "tesseract"
-    
+
+logo = ctk.CTkImage(Image.open(resource("icon.png")), size=(150,150)) 
 frame_1 = ctk.CTkFrame(root)
 frame_1.grid(row=0, column=0, sticky="news", padx=20, pady=20)
 frame_1.rowconfigure(2, weight=1)
@@ -220,9 +240,10 @@ text_box._textbox.configure(selectbackground=root._apply_appearance_mode(open_bu
 RightClickMenu = tkinter.Menu(text_box, tearoff=False, fg=ctk.ThemeManager.theme["CTkLabel"]["text_color"][o],
                               background=ctk.ThemeManager.theme["CTkFrame"]["top_fg_color"][o],
                               activebackground=root._apply_appearance_mode(open_button._fg_color))
-RightClickMenu.add_command(label="copy", command=lambda: root.clipboard_append(text_box.get(1.0, tkinter.END)))
-RightClickMenu.add_command(label="paste", command=paste)
-RightClickMenu.add_command(label="cut", command=lambda: text_box.delete(1.0, tkinter.END))
+RightClickMenu.add_command(label="cut", command=cut_text)
+RightClickMenu.add_command(label="copy", command=copy_text)
+RightClickMenu.add_command(label="paste", command=paste_text)
+RightClickMenu.add_command(label="clear", command=clear_text)
 text_box.bind("<Button-3>", lambda event: do_popup(event, frame=RightClickMenu))
 
 root.mainloop()
