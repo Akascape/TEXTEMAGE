@@ -9,7 +9,7 @@
 - One click text extraction
 
 ## Download
-<br> <p align='center'> **WINDOWS (Tesseract 5.3.0 Included)** <br> <p align='center'> [<img src="https://img.shields.io/badge/FREE-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=green" width=300>](https://github.com/Akascape/TEXTEMAGE/releases/download/Textemage.exe/Textemage_v1.3_win64.zip)
+<br> <p align='center'> **WINDOWS (Tesseract 5.3.0 Included)** <br> <p align='center'> [<img src="https://img.shields.io/badge/FREE-DOWNLOAD-informational?style=flat&logo=Microsoft&logoColor=blue&color=green" width=300>](https://github.com/Akascape/TEXTEMAGE/releases/download/v1.4/Textemage_v1.4_win64.zip)
 
 <br> <p align='center'> **SOURCE CODE** <br> <p align='center'> [<img src="https://img.shields.io/badge/Python_Version-informational?style=flat&logo=python&logoColor=blue&color=eaea4a" width=200 height=40>](https://github.com/Akascape/TEXTEMAGE/archive/refs/heads/main.zip) <br> Don't forget to leave a ⭐ </p>
 
